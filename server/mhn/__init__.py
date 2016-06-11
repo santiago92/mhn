@@ -1,16 +1,14 @@
+import uuid
 from urlparse import urljoin
 
-from flask import Flask, request, jsonify, abort, url_for, session
-from flask.ext.sqlalchemy import SQLAlchemy
-from flask.ext.security import Security, SQLAlchemyUserDatastore
-from flask.ext.security.utils import encrypt_password as encrypt
-from flask.ext.mail import Mail
-from werkzeug.contrib.atom import AtomFeed
 import xmltodict
-import uuid
-import random
-import string
+from flask import Flask, request, jsonify, abort, url_for
+from flask_mail import Mail
+from flask_security import Security, SQLAlchemyUserDatastore
+from flask_security.utils import encrypt_password as encrypt
+from flask_sqlalchemy import SQLAlchemy
 from flask_wtf.csrf import CsrfProtect
+from werkzeug.contrib.atom import AtomFeed
 csrf = CsrfProtect()
 
 db = SQLAlchemy()
