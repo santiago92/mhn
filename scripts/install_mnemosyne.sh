@@ -3,45 +3,12 @@
 set -e
 set -x
 
-SCRIPTS=`dirname "$(readlink -f "$0")"`
-MHN_HOME=$SCRIPTS/..
+export PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:$PATH
 
-if [ -f /etc/debian_version ]; then
-    OS=Debian  # XXX or Ubuntu??
-
-    apt-get update
-    apt-get install -y git python-pip python-dev supervisor
-    pip install virtualenv
-
-    INSTALLER='apt-get'
-    REPOPACKAGES=''
-
-    PYTHON=`which python`
-    PIP=`which pip`
-    $PIP install virtualenv
-    VIRTUALENV=`which virtualenv`
-
-elif [ -f /etc/redhat-release ]; then
-    OS=RHEL
-    export PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:$PATH
-    if  [ ! -f /usr/local/bin/python2.7 ]; then
-        $SCRIPTDIR/install_python2.7.sh
-    fi
-
-    #use python2.7
-    PYTHON=/usr/local/bin/python2.7
-    PIP=/usr/local/bin/pip2.7
-    VIRTUALENV=/usr/local/bin/virtualenv
-
-else
-    echo -e "ERROR: Unknown OS\nExiting!"
-    exit -1
-fi
-
-
-bash $SCRIPTS/install_mongo.sh
-
-mkdir -p /opt
+PYTHON=/usr/bin/python
+PIP=/usr/bin/pip
+VIRTUALENV=/usr/local/bin/virtualenv
+mkdir /home/santi/tesis/webapi 
 cd /opt/
 git clone https://github.com/threatstream/mnemosyne.git
 cd mnemosyne
