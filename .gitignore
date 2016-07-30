@@ -31,3 +31,4 @@ server/.idea
 server/mhn/.idea
 server/mhn/venv/
 server/venv/
+.idea
