@@ -26,4 +26,8 @@ index.html*
 .#*
 
 .DS_Store
-.idea
+server/.idea/
+server/.idea
+server/mhn/.idea
+server/mhn/venv/
+server/venv/

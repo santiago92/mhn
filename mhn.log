@@ -1,0 +1,63 @@
+2016-06-05 19:22:47,590 -  /usr/lib/python2.7/site-packages/flask/app.py - Exception on / [GET]
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/lib/python2.7/site-packages/flask_login.py", line 758, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/santi/tesis/mhn/server/mhn/ui/views.py", line 58, in dashboard
+    clio = Clio()
+  File "/home/santi/tesis/mhn/server/mhn/common/clio.py", line 27, in __init__
+    self.client = pymongo.MongoClient()
+  File "/usr/lib/python2.7/site-packages/pymongo/mongo_client.py", line 369, in __init__
+    raise ConnectionFailure(str(e))
+ConnectionFailure: [Errno 111] Connection refused
+2016-06-05 19:25:12,835 -  /usr/lib/python2.7/site-packages/flask/app.py - Exception on / [GET]
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/lib/python2.7/site-packages/flask_login.py", line 758, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/santi/tesis/mhn/server/mhn/ui/views.py", line 58, in dashboard
+    clio = Clio()
+  File "/home/santi/tesis/mhn/server/mhn/common/clio.py", line 27, in __init__
+    self.client = pymongo.MongoClient()
+  File "/usr/lib/python2.7/site-packages/pymongo/mongo_client.py", line 369, in __init__
+    raise ConnectionFailure(str(e))
+ConnectionFailure: [Errno 111] Connection refused
+2016-06-05 19:25:23,794 -  /usr/lib/python2.7/site-packages/flask/app.py - Exception on / [GET]
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/lib/python2.7/site-packages/flask_login.py", line 758, in decorated_view
+    return func(*args, **kwargs)
+  File "/home/santi/tesis/mhn/server/mhn/ui/views.py", line 58, in dashboard
+    clio = Clio()
+  File "/home/santi/tesis/mhn/server/mhn/common/clio.py", line 27, in __init__
+    self.client = pymongo.MongoClient()
+  File "/usr/lib/python2.7/site-packages/pymongo/mongo_client.py", line 369, in __init__
+    raise ConnectionFailure(str(e))
+ConnectionFailure: [Errno 111] Connection refused
